@@ -1,5 +1,4 @@
-export function PostData(userData){
-    console.log("user data is ", userData)
+export function GetData(userData){
     let baseUrl = "https://jsonplaceholder.typicode.com/users/"
     return new Promise((resolve, reject) => {
         fetch(baseUrl+"?"+"username="+userData.name+"&email="+userData.email)
@@ -12,3 +11,5 @@ export function PostData(userData){
         })
     })
 }
+
+export default GetData

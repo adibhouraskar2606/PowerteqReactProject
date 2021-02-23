@@ -11,7 +11,6 @@ class ContainerComponent extends React.Component {
         this.handleChange = this.handleChange.bind(this)
     }
     handleChange(){
-        console.log("I am clicked")
         this.setState(prevState => {
             return {
                 isTableComponent : !prevState.isTableComponent

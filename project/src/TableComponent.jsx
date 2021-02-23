@@ -16,7 +16,6 @@ class TableComponent extends React.Component {
                 this.setState({
                     albums : data 
                 })
-                console.log("album data ",this.state)
             })
     }
 
@@ -38,8 +37,7 @@ class TableComponent extends React.Component {
                             <td>{item.title}</td>
                             <td>{item.userId}</td>
                             </tr>
-                        )
-                        
+                            )
                         )
                     }
             </tbody>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {PostData} from './PostData' 
+import {GetData} from './GetData' 
 import Conditional from './Conditional'
 
 
@@ -17,13 +17,11 @@ class FormComponent extends React.Component {
     }    
     login(e){
         e.preventDefault()
-        console.log("in login function",this.state)
-        PostData(this.state).then ((result) =>{
+        GetData(this.state).then ((result) =>{
             this.setState({
                 responseJSON : result,
                 clicked : true
             })
-            console.log("in login after post data ", this.state)
         })
         
 
@@ -33,7 +31,6 @@ class FormComponent extends React.Component {
         this.setState({
             [elem.target.name] : elem.target.value
         })
-        console.log(this.state)
     }
 
     render() {
